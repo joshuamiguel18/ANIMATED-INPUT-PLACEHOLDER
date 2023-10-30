@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-wrapper {
+    min-width: 200px;
+    height: 60px;
+    position: relative;
+}
+.input-wrapper input {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color .3s ease-in-out;
+}
+.input-wrapper label {
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    background-color: white;
+    margin-top: 20px;
+    left: 10px;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 1.1rem;
+    transition: all .4s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: blue;
+}
+.input-wrapper input:focus~label {
+    margin-top: -10px;
+    left: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+}
